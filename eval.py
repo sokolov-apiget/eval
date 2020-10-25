@@ -2,9 +2,9 @@ import vk_api
 token=''
 id= 
 
- vk_session = vk_api.VkApi(token=token)
- vk = vk_session.get_api()
- longpoll = VkLongPoll(vk_session)
+vk_session = vk_api.VkApi(token=token)
+vk = vk_session.get_api()
+longpoll = VkLongPoll(vk_session)
 
  	for event in longpoll.listen():
  		if event.type == VkEventType.MESSAGE_NEW:
